@@ -1,6 +1,6 @@
-// Assuming supabase is initialized elsewhere, e.g., in a separate script tag or module
-// If not, you'll need to initialize it here:
-// const supabase = createClient(supabaseUrl, supabaseKey);
+// Assuming supabase is initialized elsewhere, but declaring it here to avoid errors
+// You might need to adjust the initialization based on your actual setup
+const supabase = window.supabase
 
 // DOM elements
 const loginForm = document.getElementById("login-form")
