@@ -1,9 +1,8 @@
-// Import necessary modules or declare variables
-const NEXT_PUBLIC_SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://onlgopvvyejgrdygerus.supabase.co" // Replace with your actual URL or import
-const NEXT_PUBLIC_SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9ubGdvcHZ2eWVqZ3JkeWdlcnVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY3NjAxNTksImV4cCI6MjA2MjMzNjE1OX0.qoSaBbss_wUnH0Y0O4pe4l7BGyn7tscxGCDvlKMsoPo" // Replace with your actual key or import
+import { createClient } from "@supabase/supabase-js"
 
-// Initialize Supabase client
-const supabase = supabase.createClient(NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY)
+const supabaseUrl = process.env.SUPABASE_URL
+const supabaseKey = process.env.SUPABASE_ANON_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 // DOM elements that exist across pages
 const adminLink = document.getElementById("admin-link")
