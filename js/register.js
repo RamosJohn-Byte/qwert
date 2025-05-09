@@ -1,11 +1,11 @@
-// Assume supabase is initialized elsewhere, e.g., in a separate script tag or module
-// For example:
-// const { createClient } = supabase;
-// const supabase = createClient('YOUR_SUPABASE_URL', 'YOUR_SUPABASE_ANON_KEY');
-
 // DOM elements
 const registerForm = document.getElementById("register-form")
 const errorMessage = document.getElementById("error-message")
+
+// Initialize Supabase client (replace with your Supabase URL and Key)
+const supabaseUrl = "YOUR_SUPABASE_URL" // Replace with your Supabase URL
+const supabaseKey = "YOUR_SUPABASE_ANON_KEY" // Replace with your Supabase Anon Key
+const supabase = supabase.createClient(supabaseUrl, supabaseKey)
 
 // Handle register form submission
 if (registerForm) {
