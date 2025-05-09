@@ -1,11 +1,11 @@
-import { createClient } from "@supabase/supabase-js"
-
-const supabaseUrl = process.env.SUPABASE_URL
-const supabaseKey = process.env.SUPABASE_ANON_KEY
-const supabase = createClient(supabaseUrl, supabaseKey)
+// Import supabase client
+import { supabase } from "./supabaseClient.js"
 
 // DOM elements
 const getStartedBtn = document.getElementById("get-started-btn")
+
+// Simple script to check if JavaScript is loading
+console.log("Main.js loaded successfully")
 
 // Update get started button based on auth state
 document.addEventListener("DOMContentLoaded", async () => {
